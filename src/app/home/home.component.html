@@ -1,0 +1,69 @@
+<!--
+  //6.1
+<p>
+  home works!
+</p>
+-->
+
+<!--6.2-->
+<h1>Console</h1>
+<button (click)="firstClick()">Click me</button>
+<!--6.2-->
+
+<!--7.1<h1>Home</h1>-->
+<!--7.2 
+  one of 2 ways to change appearance of ui: style binding
+  class grey will only attach to 
+  h1 class
+  if boolean h1Style is true-->
+<h1 [class.gray]="h1Style6">Home6</h1>
+<button (click)="firstClick6()">Click me6</button>
+
+
+<!--8.1 
+  one of 2 ways to change appearance of ui: class
+  gray class will only show if h1Style1 is true
+  large will show up if h1Style is not true
+-->
+<h1 [ngClass]="{
+  'gray': h1Style1,
+  'large': !h1Style1
+}">Home1
+</h1>
+
+<button (click)="firstClick1()">Click me1</button>
+<!--8.1-->
+
+<!--9.1 
+  if h1Style1 is true
+  it is gray
+  if not, black
+-->
+<h1 [style.color]="h1Style2 ? 'gray': 'black'">Home2
+</h1>
+
+<button (click)="firstClick2()">Click me2</button>
+<!--9.1-->
+
+<!--10.1-->
+<h1 [ngStyle]="{
+  'color': h1Style3 ? 'gray': 'black',
+  'font-size': h1Style3 ? '1em': '4em'
+}">Home3
+</h1>
+
+<button (click)="firstClick3()">Click me3</button>
+<!--10.1-->
+
+<h1>Console1</h1>
+<!--11.6-->
+<button (click)="firstClick5()">Click me4</button>
+
+<!--12.7-->
+<ul *ngIf="users">
+  <li *ngFor="let user of users.data">
+    <img [src]="user.avatar">
+    <p>{{ user.first_name }}{{ user.last_name }}</p>
+  </li>
+</ul>
+<!--12.7-->
